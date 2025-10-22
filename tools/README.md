@@ -8,12 +8,6 @@ EasyView 한글 폰트 파일(`.han`)을 Arduino/ESP32용 C 헤더 파일(`.h`)�
 - `test_hangul_font.py` - 폰트 테스트 및 시각화 도구
 - `requirements.txt` - Python 의존성 패키지
 
-## 설치
-
-```powershell
-cd tools
-pip install -r requirements.txt
-```
 
 ## 사용 방법
 
@@ -226,42 +220,3 @@ jong_idx = 248 + jong_bul * 28 + (jong_mapped - 1)  # jong > 0인 경우만
 초성 글리프 | 중성 글리프 | 종성 글리프 → 최종 한글
 ```
 
-## 출력 예시
-
-### 변환 출력
-```
-📁 142개의 한글 폰트 파일 발견
-
-✓ 변환 완료: ..\AimHangul\fonts\H01.h
-  - 총 360개 글리프
-  - 파일 크기: 11520 바이트
-...
-✅ 변환 완료! 출력 디렉토리: ..\AimHangul\fonts
-```
-
-### 테스트 출력
-
-
-## 생성된 헤더 파일 사용법
-
-```cpp
-#include "H01.h"
-
-// 폰트 데이터 접근
-const uint8_t* font_ptr = H01_font;
-
-// 특정 글리프 읽기 (예: 인덱스 10)
-int glyph_index = 10;
-int offset = glyph_index * 32;
-
-for (int row = 0; row < 16; row++) {
-    uint8_t b0 = pgm_read_byte(&font_ptr[offset + row * 2]);
-    uint8_t b1 = pgm_read_byte(&font_ptr[offset + row * 2 + 1]);
-    
-    // 비트 전개하여 픽셀 그리기
-    for (int k = 0; k < 8; k++) {
-        if (b0 & (0x80 >> k)) setPixel(x + k, y + row);
-        if (b1 & (0x80 >> k)) setPixel(x + 8 + k, y + row);
-    }
-}
-```
