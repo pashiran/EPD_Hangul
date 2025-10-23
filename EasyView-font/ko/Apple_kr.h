@@ -2,7 +2,7 @@
  * Apple_kr - Korean Hangul Font for Arduino/ESP32
  * 
  * Converted from EasyView font file: Apple_kr.han
- * Generated: 2025-10-22 17:23:09
+ * Generated: 2025-10-22 17:28:58
  * 
  * Font Structure:
  * - Glyph Size: 16x16 pixels
@@ -20,23 +20,6 @@
 #define APPLE_KR_H
 
 #include <Arduino.h>
-
-// Font constants
-#define APPLE_KR_WIDTH 16
-#define APPLE_KR_HEIGHT 16
-#define APPLE_KR_BYTES_PER_GLYPH 32
-#define APPLE_KR_TOTAL_GLYPHS 360
-
-#define APPLE_KR_CHO_OFFSET 0
-#define APPLE_KR_JUNG_OFFSET 160
-#define APPLE_KR_JONG_OFFSET 248
-
-#define APPLE_KR_CHO_COUNT 20
-#define APPLE_KR_CHO_BUL 8
-#define APPLE_KR_JUNG_COUNT 22
-#define APPLE_KR_JUNG_BUL 4
-#define APPLE_KR_JONG_COUNT 28
-#define APPLE_KR_JONG_BUL 4
 
 // Font bitmap data (MSB first, 16x16 pixels, 32 bytes per glyph)
 const uint8_t Apple_kr_Bitmaps[] PROGMEM = {

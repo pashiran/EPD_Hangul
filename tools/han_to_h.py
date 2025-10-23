@@ -165,24 +165,6 @@ class HangulFontConverter:
                 # Arduino 헤더
                 f.write(f"#include <Arduino.h>\n\n")
                 
-                # 폰트 상수 정의
-                f.write(f"// Font constants\n")
-                f.write(f"#define {self.font_name.upper()}_WIDTH {self.GLYPH_WIDTH}\n")
-                f.write(f"#define {self.font_name.upper()}_HEIGHT {self.GLYPH_HEIGHT}\n")
-                f.write(f"#define {self.font_name.upper()}_BYTES_PER_GLYPH {self.BYTES_PER_GLYPH}\n")
-                f.write(f"#define {self.font_name.upper()}_TOTAL_GLYPHS {self.TOTAL_GLYPHS}\n\n")
-                
-                f.write(f"#define {self.font_name.upper()}_CHO_OFFSET {self.CHO_OFFSET}\n")
-                f.write(f"#define {self.font_name.upper()}_JUNG_OFFSET {self.JUNG_OFFSET}\n")
-                f.write(f"#define {self.font_name.upper()}_JONG_OFFSET {self.JONG_OFFSET}\n\n")
-                
-                f.write(f"#define {self.font_name.upper()}_CHO_COUNT {self.CHO_COUNT}\n")
-                f.write(f"#define {self.font_name.upper()}_CHO_BUL {self.CHO_BUL}\n")
-                f.write(f"#define {self.font_name.upper()}_JUNG_COUNT {self.JUNG_COUNT}\n")
-                f.write(f"#define {self.font_name.upper()}_JUNG_BUL {self.JUNG_BUL}\n")
-                f.write(f"#define {self.font_name.upper()}_JONG_COUNT {self.JONG_COUNT}\n")
-                f.write(f"#define {self.font_name.upper()}_JONG_BUL {self.JONG_BUL}\n\n")
-                
                 # 비트맵 데이터
                 f.write(f"// Font bitmap data (MSB first, 16x16 pixels, 32 bytes per glyph)\n")
                 f.write(f"const uint8_t {self.font_name}_Bitmaps[] PROGMEM = {{\n")
