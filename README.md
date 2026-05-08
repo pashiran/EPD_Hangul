@@ -176,5 +176,5 @@ python tools/ttf-converter/ttf_to_h.py NanumGothic.ttf Nanum_kr.h --size 16 --ch
 
 - [GxEPD2 한글 표시 방법](https://blog.naver.com/sanguru/221854830624)
 - [전자책 프로젝트 - 한글 폰트](https://blog.naver.com/gilchida/222927710968)
+- [마이크로파이썬 한글 사용하기](https://blog.naver.com/gilchida/224073231896)
 - [옛한글 텍스트 뷰어 EasyView](EasyView-3.0.b2)
-
